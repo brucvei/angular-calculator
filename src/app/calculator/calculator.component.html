@@ -1,1 +1,28 @@
-<p>calculator works!</p>
+<div class="container align-center">
+  <div class="result">
+    <span class="result-text">
+      {{result}}
+    </span>
+    <span class="value" *ngIf="value.active">
+      ={{value.value}}
+    </span>
+  </div>
+  <div class="buttons align-center" *ngFor="let buttonRow of buttons">
+    <button class="button align-center" *ngFor="let button of buttonRow" [ngClass]="buttonColor(button)">
+      {{button}}
+    </button>
+  </div>
+
+  <div class="dialog">
+    <div class="space-title">
+      <div>Themes</div>
+      <div class="close align-center">X</div>
+    </div>
+    <div class="content">
+      <ul class="themes align-center">
+        <li class="align-center">Ligth</li>
+        <li class="align-center">Dark</li>
+      </ul>
+    </div>
+  </div>
+</div>
